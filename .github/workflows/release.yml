@@ -13,7 +13,7 @@ jobs:
         with:
           dotnet-version: '8.0.x'
       - name: Publish
-        run: dotnet publish -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o dist
+        run: dotnet publish src/llm-arena.csproj -c Release -r win-x64 --self-contained -p:PublishSingleFile=true -o dist
       - name: Checksum
         shell: pwsh
         run: |
